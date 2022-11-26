@@ -1,8 +1,8 @@
-import RoadmapIcon from "./icons/Roadmap";
-import ScheduleIcon from "./icons/Schedule";
-import TasksIcon from "./icons/Tasks";
-import NotesIcon from "./icons/Notes";
-import FilesIcon from "./icons/Files";
+import RoadmapIcon from "../Icons/Roadmap";
+import ScheduleIcon from "../Icons/Schedule";
+import TasksIcon from "../Icons/Tasks";
+import NotesIcon from "../Icons/Notes";
+import FilesIcon from "../Icons/Files";
 
 export type IconNameType = "RoadMap" | "Schedule" | "Tasks" | "Notes" | "Files"
 

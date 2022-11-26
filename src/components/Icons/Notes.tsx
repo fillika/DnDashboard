@@ -1,7 +1,9 @@
-import { IconType } from "./iconType";
+import React from "react";
+import { IconType } from "./IconType";
 
-const NotesIcon = ({ color }: IconType) => {
-    return <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+const NotesIcon: React.FC<IconType> = ({ color, className }) => {
+    return <svg className={className} width="28" height="28" viewBox="0 0 28 28" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_1_1896)">
             <path
                 d="M17.481 17.102H8.95103C8.84349 17.102 8.74035 17.1447 8.66431 17.2208C8.58826 17.2968 8.54553 17.4 8.54553 17.5075C8.54553 17.6151 8.58826 17.7182 8.66431 17.7943C8.74035 17.8703 8.84349 17.913 8.95103 17.913H17.481C17.5886 17.913 17.6917 17.8703 17.7678 17.7943C17.8438 17.7182 17.8865 17.6151 17.8865 17.5075C17.8865 17.4 17.8438 17.2968 17.7678 17.2208C17.6917 17.1447 17.5886 17.102 17.481 17.102Z"

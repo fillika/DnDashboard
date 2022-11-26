@@ -1,5 +1,5 @@
-import arrowDown from "../../images/down-arrow-svgrepo-com.svg";
 import styled from "styled-components";
+import ArrowDownIcon from "../Icons/ArrowDown";
 
 type ListItemType = {
     name: string,
@@ -39,12 +39,6 @@ const ImageWrapper = styled.div`
   margin-right: 15px;
   padding-left: 7px;
 `
-
-const Img = styled.img`
-  width: 10px;
-  height: 5px;
-`
-
 const ListWrapper = styled.div`
 
 `
@@ -68,7 +62,9 @@ const ListItem = styled.div`
 const List = ({ title, list }: ListProps) => {
     return <Wrapper>
         <Title>
-            <ImageWrapper><Img src={arrowDown} alt="arrow down"/></ImageWrapper>
+            <ImageWrapper>
+                <ArrowDownIcon color={"#fff"}/>
+            </ImageWrapper>
             <div>{title}</div>
         </Title>
 

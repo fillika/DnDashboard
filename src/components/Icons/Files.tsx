@@ -1,7 +1,9 @@
-import { IconType } from "./iconType";
+import React from "react";
+import { IconType } from "./IconType";
 
-const FilesIcon = ({ color }: IconType) => {
-    return <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+const FilesIcon: React.FC<IconType> = ({ color, className }) => {
+    return <svg className={className} width="28" height="28" viewBox="0 0 28 28" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_1_1884)">
             <path
                 d="M6 8.5H22C22.3978 8.5 22.7794 8.65804 23.0607 8.93934C23.342 9.22064 23.5 9.60218 23.5 10V20C23.5 20.3978 23.342 20.7794 23.0607 21.0607C22.7794 21.342 22.3978 21.5 22 21.5H7C6.60218 21.5 6.22064 21.342 5.93934 21.0607C5.65804 20.7794 5.5 20.3978 5.5 20V9C5.5 8.86739 5.55268 8.74021 5.64645 8.64645C5.74021 8.55268 5.86739 8.5 6 8.5V8.5Z"
