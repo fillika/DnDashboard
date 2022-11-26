@@ -12,6 +12,7 @@ const Wrapper = styled.div`
 const StyledAvatar = styled(Avatar)`
   width: 40px;
   height: 40px;
+  cursor: pointer;
 `
 
 const WorkPanel: React.FC = () => {
