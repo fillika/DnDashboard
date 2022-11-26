@@ -4,6 +4,39 @@ import Search from "./Search";
 import Workspace from "./Workspace";
 import List from "./List";
 
+const favorites = [
+    {
+        name: "Marketing",
+        id: "__1"
+    },
+    {
+        name: "Mobile App",
+        id: "__2"
+    },
+],
+    projects = [
+    {
+        name: "Marketing",
+        id: "__3"
+    },
+    {
+        name: "Landing Pages",
+        id: "__4"
+    },
+    {
+        name: "Wedding",
+        id: "__5"
+    },
+    {
+        name: "Mobile App",
+        id: "__6"
+    },
+    {
+        name: "House Construction",
+        id: "__7"
+    },
+];
+
 const Wrapper = styled.div`
   width: 219px;
   height: 100vh;
@@ -16,8 +49,8 @@ const SideBar = () => {
         <Logo/>
         <Search/>
         <Workspace/>
-        <List title={"Favorites"}/>
-        <List title={"My Projects"}/>
+        <List title={"Favorites"} list={favorites}/>
+        <List title={"My Projects"} list={projects}/>
     </Wrapper>
 }
 
