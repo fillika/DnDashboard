@@ -4,6 +4,7 @@ import Search from "./Search";
 import Workspace from "./Workspace";
 import List from "./List";
 import { favorites, projects } from "./data";
+import PlusIcon from "../Icons/Plus";
 
 const Wrapper = styled.div`
   width: 219px;
@@ -26,7 +27,9 @@ const SideBar = () => {
         </SearchWrapper>
         <Workspace/>
         <List title={"Favorites"} list={favorites}/>
-        <List title={"My Projects"} list={projects}/>
+        <List title={"My Projects"} list={projects}>
+            <PlusIcon color="#fff"/>
+        </List>
     </Wrapper>
 }
 

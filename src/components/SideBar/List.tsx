@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ArrowDownIcon from "../Icons/ArrowDown";
+import React from "react";
 
 type ListItemType = {
     name: string,
@@ -7,7 +8,8 @@ type ListItemType = {
 }
 type ListProps = {
     title: string,
-    list: ListItemType[]
+    list: ListItemType[],
+    children?: JSX.Element,
 }
 
 const Wrapper = styled.div`
@@ -19,6 +21,7 @@ const Wrapper = styled.div`
 const Title = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   color: #fff;
   cursor: pointer;
   height: 34px;
@@ -53,19 +56,27 @@ const ListItem = styled.div`
     transition: 155ms ease-in opacity;
     opacity: 0.9;
   }
-  
+
   :last-child {
     margin-bottom: 0;
   }
 `
 
-const List = ({ title, list }: ListProps) => {
+const StaticWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const List = ({ title, list, children }: ListProps) => {
     return <Wrapper>
         <Title>
-            <ImageWrapper>
-                <ArrowDownIcon color={"#fff"}/>
-            </ImageWrapper>
-            <div>{title}</div>
+            <StaticWrapper>
+                <ImageWrapper>
+                    <ArrowDownIcon color="#fff"/>
+                </ImageWrapper>
+                <div>{title}</div>
+            </StaticWrapper>
+            {children}
         </Title>
 
         <ListWrapper>
