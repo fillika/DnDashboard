@@ -4,6 +4,7 @@ import styled from "styled-components";
 type Props = {
     className?: string,
     children: JSX.Element,
+    onClick?: (arg: any) => void;
 }
 
 const Wrapper = styled.button`
@@ -20,8 +21,8 @@ const Wrapper = styled.button`
   }
 `
 
-const Button: React.FC<Props> = ({ className, children }) => {
-    return <Wrapper className={className}>{children}</Wrapper>
+const Button: React.FC<Props> = ({ className, children, onClick }) => {
+    return <Wrapper className={className} onClick={onClick}>{children}</Wrapper>
 }
 
 export default Button;
