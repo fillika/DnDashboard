@@ -3,6 +3,7 @@ import searchIcon from "../../images/search.svg";
 
 const Wrapper = styled.div`
   position: relative;
+  margin-bottom: 19px;
 `
 
 const Input = styled.input`
