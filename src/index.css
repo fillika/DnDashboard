@@ -16,6 +16,7 @@ code {
     monospace;
 }
 
-input {
+input, button {
   border: none;
+  background: none;
 }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import avatar from "../../images/avatar.png";
+import Avatar from "../Avatar";
 
 const Wrapper = styled.div`
   background-color: #2D4071;
@@ -14,17 +14,8 @@ const Wrapper = styled.div`
   margin-bottom: 8px;
 `
 
-
-const ImageWrapper = styled.div`
-  overflow: hidden;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
+const StyledAvatar = styled(Avatar)`
   margin-right: 8px;
-  
-  img {
-    width: 100%;
-  }
 `
 
 const Title = styled.span`
@@ -33,9 +24,7 @@ const Title = styled.span`
 
 const Workspace = () => {
     return <Wrapper>
-        <ImageWrapper>
-            <img src={avatar} alt="User avatar"/>
-        </ImageWrapper>
+        <StyledAvatar/>
         <Title>
             My workspace
         </Title>
