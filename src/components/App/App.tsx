@@ -1,6 +1,6 @@
 import React from 'react';
-import SideBar from "../SideBar/SideBar";
-import Tools from "../Tools/Tools";
+import SideBar from "../SideBar";
+import Tools from "../Tools";
 import styled from "styled-components";
 import Kanban from "../Kanban";
 

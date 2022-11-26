@@ -4,6 +4,7 @@ import List from "./List";
 
 const Wrapper = styled.div`
   width: 154px;
+  min-width: 154px;
   padding-top: 24px;
   padding-right: 16px;
   background-color: #F5F8FA;
