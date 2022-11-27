@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Task from "./Task";
 import { useDrop } from "react-dnd";
+import onDropColumn from "./utils/onDropColumn";
 
 type Props = {
     title: string;
@@ -10,6 +11,7 @@ type Props = {
     paddingLeft?: string;
     addTask: addTaskCallback;
     removeTask: removeTaskCallback;
+    status: TaskStatus
 }
 
 const Wrapper = styled.div`
@@ -60,19 +62,23 @@ const TaskWrapper = styled.div<{ paddingLeft?: string }>`
   padding-left: ${props => props.paddingLeft ? props.paddingLeft : "10px"};
 `
 
+const DropZone = styled.div`
+  height: 100%;
+`
+
 const Column: React.FC<Props> = (props) => {
-    const { title, tasks, className, paddingLeft, addTask, removeTask } = props;
-    // const onDrop = (item: { task: TaskType }) => {
-    //     onDropFinished(item.task, status)
-    // };
-    //
-    // const [, dropRef] = useDrop(
-    //     () => ({
-    //         accept: "Task",
-    //         drop: onDrop,
-    //     }),
-    //     []
-    // )
+    const { title, tasks, className, paddingLeft, status, addTask, removeTask } = props;
+    const onDrop = (item: { task: TaskType }) => {
+        onDropColumn(item, status, tasks.length, addTask, removeTask);
+    };
+
+    const [, dropRef] = useDrop(
+        () => ({
+            accept: "Task",
+            drop: onDrop,
+        }),
+        []
+    )
 
     return <Wrapper className={className}>
         <Header>
@@ -84,6 +90,7 @@ const Column: React.FC<Props> = (props) => {
             {tasks.map((task, i) => {
                 return <Task key={task.id} task={task} idx={i} addTask={addTask} removeTask={removeTask}/>
             })}
+            <DropZone ref={dropRef}/>
         </TaskWrapper>
     </Wrapper>
 }

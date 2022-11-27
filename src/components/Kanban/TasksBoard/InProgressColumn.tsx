@@ -8,7 +8,11 @@ const InProgressColumn: React.FC = () => {
     const inProgressTasks = useSelector(selectInProgressTasks);
     const [addTask, removeTask] = useTaskOperation();
 
-    return <Column title="In progress" tasks={inProgressTasks} addTask={addTask} removeTask={removeTask}/>
+    return <Column title="In progress"
+                   status="inProgress"
+                   tasks={inProgressTasks}
+                   addTask={addTask}
+                   removeTask={removeTask}/>
 }
 
 export default InProgressColumn;

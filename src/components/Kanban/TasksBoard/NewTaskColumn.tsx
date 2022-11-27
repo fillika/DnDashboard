@@ -8,7 +8,9 @@ const NewTaskColumn: React.FC = () => {
     const newTasks = useSelector(selectNewTasks);
     const [addTask, removeTask] = useTaskOperation();
 
-    return <Column title="New task" tasks={newTasks}
+    return <Column title="New task"
+                   status="new"
+                   tasks={newTasks}
                    paddingLeft={"20px"}
                    addTask={addTask} removeTask={removeTask}/>
 }

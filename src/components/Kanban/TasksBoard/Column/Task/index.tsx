@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { useDrag, useDrop } from "react-dnd";
-import onDropAbove from "./onDropAbove";
-import onDropBelow from "./onDropBelow";
+import onDropAbove from "../utils/onDropAbove";
+import onDropBelow from "../utils/onDropBelow";
 
 type Props = {
     task: TaskType,

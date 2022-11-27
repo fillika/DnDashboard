@@ -8,7 +8,11 @@ const CompletedColumn: React.FC = () => {
     const completedTasks = useSelector(selectCompletedTasks);
     const [addTask, removeTask] = useTaskOperation();
 
-    return <Column title="Completed" tasks={completedTasks} addTask={addTask} removeTask={removeTask}/>
+    return <Column title="Completed"
+                   status="completed"
+                   tasks={completedTasks}
+                   addTask={addTask}
+                   removeTask={removeTask}/>
 }
 
 export default CompletedColumn;
