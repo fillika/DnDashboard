@@ -65,7 +65,7 @@ const Column: React.FC<Props> = ({ title, tasks, className, paddingLeft }) => {
             </HeaderContentWrapper>
         </Header>
         <TaskWrapper paddingLeft={paddingLeft}>
-            {tasks.map(task => <Task task={task}/>)}
+            {tasks.map(task => <Task key={task.id} task={task}/>)}
         </TaskWrapper>
     </Wrapper>
 }
