@@ -26,6 +26,7 @@ const Wrapper = styled.div`
   padding: 6px;
   top: calc(100% + 8px);
   animation: 155ms ease-in ${appearAnimation};
+  z-index: 1000;
 `
 
 const Popup: React.FC<Props> = ({ children, isActive }) => {
