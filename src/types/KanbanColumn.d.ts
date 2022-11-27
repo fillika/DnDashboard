@@ -1,0 +1,1 @@
+type ColumnStatus = "NewTasks" | "Scheduled" | "InProgress" | "Completed";
